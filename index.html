@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800|Open+Sans+Condensed:300|Slabo+27px' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="libs/css/styles.css" />
+</head>
+
+<body ng-app="pageApp" ng-controller="pageController as pageCtl">
+    <div id="here" class="wrapper">
+        <div class="top-wrapper">
+            <div class="background">
+                <div class="background-mask">
+                    <div class="top-div ">
+                        <h1>WEST WIND STABLES</h1>
+                        <h2>
+Equine Rescue &amp; Rehabilitation</h2>
+                        <p class="summary">West Wind Stables Equine Rescue and Rehab, Inc. is a non-profit, <strong>all breed</strong> horse rescue facility in Bellefontaine, Ohio. Owned and operated by Mike and Suzie Holycross, we've been going strong for over 8 years, with over 200 horses accepted into our facility or posted for others.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-wrapper">
+            <nav>
+                <ul>
+                    <li ng-click="pageCtl.selectPage('home')">HOME<span class="underline"></span>
+                    </li>
+                    <li ng-click="pageCtl.selectPage('horses')">HORSES<span class="underline"></span>
+                    </li>
+                    <li ng-click="pageCtl.selectPage('facility')">OUR FACILITY<span class="underline"></span>
+                    </li>
+                    <li ng-click="pageCtl.selectPage('contact')">CONTACT<span class="underline"></span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="center-div">
+            <home-page ng-show='pageCtl.page === "home"'></home-page>
+            <horses-page ng-show='pageCtl.page === "horses"'></horses-page>
+            <info-page ng-show='pageCtl.page === "info"'></info-page>
+            <facility-page ng-show='pageCtl.page === "facility"'></facility-page>
+            <contact-page ng-show='pageCtl.page === "contact"'></contact-page>
+            <div class="quote-div">
+                <p class="quote">In riding a horse we borrow freedom.</p>
+                <p class="author">- Helen Thomson</p>
+            </div>
+            <div class="bottom-div light-div">
+                <div class="inblk center-text">
+                    <p>Our goal at West Wind Stables is to prevent horses from going to auction or slaughter by placing them in permanent adoptive homes. We try to keep adoption fees low, just enough to help cover purchase price (if any) and vet expenses/vaccination costs. Some horses adopt at higher fees if we've had to buy them at auction or we've sent them for professional training. There is an adoption agreement to be signed and we do follow up on horses we've placed.
+                    </p>
+                </div>
+                <div class="inblk">
+                    <a href="http://www.westwindhorserescue.com/AdoptionAgreement.pdf">
+                        <span class="ghst-btn inblk">Adoption Agreement</span>
+                    </a>
+                    <br>
+                    <a href="http://www.westwindhorserescue.com/HorsePlacementAgreement_2_.pdf">
+                        <span class="ghst-btn inblk">Placement Agreement</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-div">
+            
+        </div>
+       
+        <div class="footer">
+            <h2>WEST WIND STABLES</h2>
+            <ul>
+                <li ng-click="pageCtl.selectPage('home')">HOME<span class="underline"></span>
+                </li>
+                <li>ABOUT US<span class="underline"></span>
+                </li>
+                <li ng-click="pageCtl.selectPage('horses')">HORSES<span class="underline"></span>
+                </li>
+                <li ng-click="pageCtl.selectPage('facility')">OUR FACILITY<span class="underline"></span>
+                </li>
+                <li ng-click="pageCtl.selectPage('contact')">CONTACT<span class="underline"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="libs/js/app.js"></script>
+    <script src="libs/js/scripts.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,411 @@
+html,
+body
+ {
+    height: 100%;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+.inblk {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.background {
+    position: relative;
+    background-position: top;
+    background-image: url("https://c2.staticflickr.com/8/7275/7033920705_ce3d1e4df2_k.jpg");
+    width: 100%;
+    min-height: 35em;
+    z-index: -1;
+}
+
+.background-mask {
+    background-image: url("http://www.uiueux.com/wp/flowfolio/wp-content/themes/flowfolio/img/bg_mask.png");
+    height: 100%;
+}
+
+.top-wrapper {
+    min-height: 35em;
+}
+
+.top-div {
+    text-align: center;
+    padding-top: 8em;
+    color: white;
+    text-shadow: black 1px 1px 1px;
+}
+
+.top-wrapper h1 {
+    font-weight: 800;
+    font-size: 3em;
+    margin: 0;
+}
+
+.top-wrapper h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.summary {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.5em;
+    width: 80%;
+    margin: 2em auto;
+}
+
+.nav-wrapper {
+    text-align: center;
+    background-color: #222;
+    margin: 0;
+}
+
+ul {
+    font-family: 'Slabo 27px', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-wrapper li {
+    display: inline-block;
+    width: 51%;
+    list-style: none;
+    margin: auto;
+    padding: .5em;
+    cursor: pointer;
+    color: white;
+}
+
+.underline {
+    background-color: white;    
+    display: block;
+    height: 2px;
+    width: 100%;
+    padding: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+li:hover .underline {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.light-div {
+    padding: 1em 0;
+    background-color: #EDEFDA;
+    text-align: center;
+}
+
+h2.page-heading {
+    font-family: 'Slabo 27px', serif;
+    font-size: 2.25em;
+}
+
+.center-div>div h3 {
+    font-family: 'Slabo 27px', serif;
+    font-size: 1.75em;
+}
+
+.thumbnail {
+    height: 17em;
+    margin: 0 .25em;
+    border-radius: 2%;
+}
+
+.horse-image {
+    width: 90%;
+    border-radius: 12px;
+}
+
+.center-text {
+    font-size: 1.27em;
+}
+
+.description {
+    min-height: 11.5em;
+    margin: 1em auto;
+    width: 45%;
+}
+
+.quote-div {
+    color: white;
+    background-color: #222;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.quote {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2em;
+    margin: 0;
+}
+
+.author {
+    margin: .75em auto;
+    width: 33%;
+    text-align: right;
+}
+
+.bottom-div {
+    padding: 3em 0;
+}
+
+.bottom-div > div {
+    padding: 0 2em;
+    vertical-align: middle;
+}
+
+.bottom-div > div:first-child {
+    width: 50%;
+}
+
+.bottom-div a {
+    color: black;
+    font-size: 1.5em
+}
+
+.ghst-btn {
+    width: 11em;
+    border: solid #222 2px;
+    padding: .75em;
+    margin: .75em 0;
+    border-radius: .3em;
+    transition: border-radius .25s, background-color .25s, color .25s;
+}
+
+.ghst-btn:hover {
+    border-radius: 2em;
+    background-color: #222;
+    color: white;
+}
+
+.horses-div {
+    margin: auto;
+    position: relative;
+}
+
+.horse-gallery {
+    width: 80%;
+    margin: auto;
+}
+
+.gallery-img {
+    
+    margin: 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform .25s;
+    width: 90%;
+    height: auto;
+}
+
+.gallery-img:hover {
+    transform: scale(1.045);
+}
+
+
+.info-div > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.closex {
+    text-align: right;
+    position: relative;
+}
+
+.closex span:first-child,
+.closex span:nth-child(2) {
+    position: absolute;
+    display: inline-block;
+    height: 15px;
+    border: 2px solid black;
+    border-radius: 9px;
+}
+
+.closex span:first-child {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.closex span:nth-child(2) {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.closex span:nth-child(3) {
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    top: 1px;
+    right: -10px;
+}
+
+.left-info {
+    
+}
+
+.right-info {
+    font-family: 'Open Sans', sans-serif;
+    padding: 3em 0 0 3em;
+    width: 40%;
+    text-align: left;
+    font-size: 1.25em;
+}
+
+.left-info img {
+    border-radius: 15px;
+    height: 25em;
+}
+
+.selected-img {
+    height: 40em;
+    cursor: pointer;
+}
+
+.sizing-div {
+    width: 80%;
+}
+
+.facility-div > div {
+    margin: auto;
+    width: 75%;
+}
+
+.facility-div p {
+    margin: 1em auto;
+    width: 70%;
+}
+
+.contact-div {
+    padding: 3em 0; 
+}
+
+.contact-div > div {
+    margin: 0em;
+    vertical-align: middle;
+}
+
+.map-div {
+    display: inline-block;
+    overflow:hidden;
+    height: 25em;
+    width: 30em;
+    border: 1px solid black;
+    border-radius: 2px;
+
+}
+
+.right-contact {
+    width: 40%;
+    display: inline-block;
+}
+
+.right-contact p {
+    font-size: 1.5em;
+}
+
+.footer {
+    background-color: #222;
+    min-height: 7em;
+    color: white;
+    text-align: center;
+}
+
+.footer h2 {
+    margin: 0;
+    padding: .5em;
+    font-size: 1.25em;
+    letter-spacing: 2px;
+}
+.footer li {
+    display: inline-block;
+    margin: 1em;
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width : 320px) {
+        
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+    }
+
+    @media only screen and (min-width : 575px) {
+        .nav-wrapper li {
+            display: inline-block;
+            margin: auto 0em;
+            padding: 1em;
+            width: auto;
+        }
+        
+        .top-wrapper h1 {
+            font-size: 4em;
+        }
+        
+        
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+        .nav-wrapper li {
+            display: inline-block;
+            margin: auto 1em;
+            padding: 1em;
+        }
+        
+        .summary {
+            width: 40%;
+        }
+        
+        .thumbnail {
+            height: 14em;
+        }
+        
+        
+        
+        .horse-image {
+            height: 25em;
+            width: auto;
+        }
+        
+        .gallery-img {
+            height: 14em;
+            width: auto;
+        }
+     }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        .nav-wrapper li {
+            margin: auto 2em;
+            padding: 1em;
+        }
+        
+        .thumbnail {
+            height: 7em;
+        }
+        
+        
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }

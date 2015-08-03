@@ -1,0 +1,30 @@
+<div ng-controller="galleryController as galleryCtl" class="horses-div light-div">
+            <div ng-show="galleryCtl.selectedView === 'gallery'">
+                <h2 class="page-heading">Here are the horses available for adoption.</h2>
+
+                <div class="horse-gallery">
+                    <div class="inblk" ng-repeat="horse in galleryCtl.horses">
+                        <img ng-click="galleryCtl.selectHorse($index); galleryCtl.selectView('info')" class="gallery-img" src="{{horse.thumb}} scroll-on-click">
+                    </div>
+                </div>
+            </div>
+            <div ng-show="galleryCtl.selectedView === 'info'" class="info-div light-div">
+                <div class="left-info">
+                    <h2 class="page-heading">{{galleryCtl.horses[galleryCtl.selectedHorse].name}}</h2>
+                    <img class="selected-img" src="{{galleryCtl.horses[galleryCtl.selectedHorse].image}}">
+                </div>
+                <div class="right-info">
+                   <div class="xcontain">
+                    <div class="closex">
+                        <span></span>
+                        <span></span>
+                        <span ng-click="galleryCtl.selectView('gallery')"></span>
+                    </div>
+                    </div>
+                    <p><strong>Height:</strong> {{galleryCtl.horses[galleryCtl.selectedHorse].height}}</p>
+                    <p><strong>Weight:</strong> {{galleryCtl.horses[galleryCtl.selectedHorse].weight}}lbs.</p>
+                    <p><strong>Age:</strong> {{galleryCtl.horses[galleryCtl.selectedHorse].age}} years</p>
+                    <p><strong>Bio:</strong> {{galleryCtl.horses[galleryCtl.selectedHorse].bio}}</p>
+                </div>
+            </div>
+        </div>

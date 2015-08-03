@@ -1,0 +1,10 @@
+<div ng-controller="horseController as horseCtl" class="home-div light-div">
+    <h2 class="page-heading">Just a few of the adopted horses we've placed.</h2>
+    <div class="inblk" ng-repeat="horse in horseCtl.horses">
+        <a href><img class="thumbnail" ng-click="horseCtl.selectHorse($index)" src="http://www.westwindhorserescue.com/{{horse.image}}">
+        </a>
+    </div>
+    <h3>{{horseCtl.horses[horseCtl.selectedHorse].name}}</h3>
+    <img class="horse-image" ng-src="http://www.westwindhorserescue.com/{{horseCtl.horses[horseCtl.selectedHorse].image}}">
+    <p class="description center-text">{{horseCtl.horses[horseCtl.selectedHorse].bio}}</p>
+</div>

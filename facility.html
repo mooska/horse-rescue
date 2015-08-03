@@ -1,0 +1,20 @@
+<div ng-controller="facilityController as faciCtl" class="facility-div light-div">
+    <div ng-show="faciCtl.selectedView === 'gallery'">
+        <h2 class="page-heading">Our Facility</h2>
+        <div ng-repeat="image in faciCtl.images" class="inblk">
+            <img class="gallery-img" ng-click="faciCtl.selectImage($index); faciCtl.selectView('info')" src="http://www.westwindhorserescue.com/{{image.imageSrc}}">
+        </div>
+    </div>
+    <div ng-show="faciCtl.selectedView === 'info'">
+        <div class="sizing-div">
+            <div class="closex">
+                <span></span>
+                <span></span>
+                <span ng-click="faciCtl.selectView('gallery')"></span>
+            </div>
+        </div>
+        <h2 class="page-heading">{{faciCtl.images[faciCtl.selectedImage].title}}</h2>
+        <img class="horse-image" src="http://www.westwindhorserescue.com/{{faciCtl.images[faciCtl.selectedImage].imageSrc}}">
+        <p>Grapes at yams mushrooms organic berries gobble. Shovels at rakes plows.. Ewes mushrooms zucchini in forage Harvester at sheep with tractor. Lamb in eggplant baler rain barrels manure hay rake. Lamb pig rooster sheep. Combine Harvester swather, baler as haybine parsley, melon in hay rake. Grapes at yams mushrooms organic berries gobble. House hen chinchillas in barn livestock cat hogs chicks trucks. Peacocks baa ostriches owls. Combine Harvester swather, baler as haybine parsley, melo.</p>
+    </div>
+</div>
